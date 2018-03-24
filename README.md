@@ -31,12 +31,14 @@
 ## Substitution
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
 2   `echo ${DATA:=word}` //return word if DATA not exist and set DATA=word  
-3 ``` >>D=$(date)
+3 ```
+  >>D=$(date)
   >>echo $D  
   >>Thu 22 Mar 2018 18:28:48 GMT  
   >>echo ${D:0:2}  
   >>Th 
-  ``` 
+  ```  
+ 
 ## Wall command
-`wall << a` will boardcast all the followed command until it see string `a`  
+1 `wall << a` will boardcast all the followed command until it see string `a`  
 
