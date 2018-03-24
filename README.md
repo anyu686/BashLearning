@@ -31,10 +31,11 @@
 ## Substitution
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
 2   `echo ${DATA:=word}` //return word if DATA not exist and set DATA=word  
-3 ```          D=$(date)
-        echo $D
-  Thu 22 Mar 2018 18:28:48 GMT
-      echo ${D:0:2}
-  Th```  
+3 ``` >>D=$(date)
+  >>echo $D  
+  >>Thu 22 Mar 2018 18:28:48 GMT  
+  >>echo ${D:0:2}  
+  >>Th 
+  ``` 
 
 
