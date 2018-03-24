@@ -37,5 +37,6 @@
   >>echo ${D:0:2}  
   >>Th 
   ``` 
-
+## Wall command
+`wall << a` will boardcast all the followed command until it see string `a`  
 
