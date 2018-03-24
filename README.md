@@ -35,8 +35,12 @@
   >>echo $D  
   >>Thu 22 Mar 2018 18:28:48 GMT  
   >>echo ${D:0:2}  
-  >>Th 
- 
+  >>Th   
+ 4  ```
+     MB17598:~ yu.an$ DATA=  
+B17598:~ yu.an$ echo ${DATA:?Error}  
+-bash: DATA: Error
+    ```
 ## Wall command
 1 `wall << a` will boardcast all the followed command until it see string `a`  
-
+## 
