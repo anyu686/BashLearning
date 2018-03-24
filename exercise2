@@ -1,0 +1,28 @@
+#! /usr/bin/env bash
+echo $#
+if [ $# -eq 0 ]
+then
+	echo plase input 
+        read filename
+        #if [-z filename] 
+	#then 
+	#	echo no input 
+        #	read filename
+	#fi	
+        cp $filename ./helloworldcopy 
+        if [ $? -eq 0 ] 
+	then
+        	echo $filename copied
+	else 	
+            	 echo error
+	fi
+else
+        echo input provided
+	for i in $@; do
+
+		 cp $i ./copyfile && echo $i copied
+	done
+fi
+
+       
+

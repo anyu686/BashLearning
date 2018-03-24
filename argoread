@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+if [ $# == 0 ]
+then 
+	echo no input,please input
+        read filename 
+else
+        filename=$@
+fi
+echo filename is $filename 
