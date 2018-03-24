@@ -47,4 +47,23 @@
 ```
 ## Wall command
 1 `wall << a` will boardcast all the followed command until it see string `a`  
-## 
+## Pattern Matching
+1 `${VAR#pattern}` //serach for pattern form beginning of varibable's vaule, delete the shortest path that match,  `##` match the longest path and retrunt the left part  
+```
+MB17598:~ yu.an$ Date=$(date)
+MB17598:~ yu.an$ echo ${Date#*2}
+4 Mar 2018 22:07:58 GMT
+MB17598:~ yu.an$ echo ${Date##*2}
+:07:58 GMT
+```
+2 ${VAR%pattern}  search the pattern from the end of string  
+```
+MB17598:~ yu.an$ echo ${Date%2*}  
+Sat 24 Mar 2018 2  
+MB17598:~ yu.an$ echo ${Date%%2*}  
+Sat  
+```
+## Regular Expression 
+## Caculation
+1 `echo $((1+1))`  
+2 `bc` deal with non-integers caculation `echo "scale=9; 10/3" | bc`     

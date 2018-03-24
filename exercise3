@@ -1,0 +1,8 @@
+#! /usr/bin/env Bash
+Date=$(date)
+day=${Date#* }
+echo The day is ${day%% *}
+year=${Date% **:**}
+echo The year is ${year##* }
+month=${Date#* *** }
+echo The Month is ${month%% *}
