@@ -1,4 +1,4 @@
-# Bash Learning Notes
+#Bash Learning Notes
 ## Echo 
 1 `echo $?` print the return state of last command, 0 success, 1 failed__  
 
@@ -25,7 +25,7 @@
 2 `$?` refer to all input parameters, used in for loop  
 3 `$#` count the input varibale number  
 ## string verification 
-1 `-z $1` check if the first parameter is empty e.g [if -z $1 -eq 1]  
+1 `-z $1` check if the first parameter is empty, return true if it is empyt,  e.g [if -z $1 -eq 1]  
 2 `[[-z $1]] && exit 1`  '&&' only execute the 2nd command if the frist command is true  
 3 `[[-z $1]] || exit 1` , `||` only execute the 2nd command if the frit command is false 
 ## Substitution
@@ -67,3 +67,9 @@ Sat
 ## Caculation
 1 `echo $((1+1))`  
 2 `bc` deal with non-integers caculation `echo "scale=9; 10/3" | bc`     
+## Grep
+1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`   
+##cut
+`cut -f 1 -d : <file>` , `-f 1` first filed, `-d :`, delimater is `:`  
+ 
+ 
