@@ -86,7 +86,8 @@ Sat
 1 `echo hello | tr [a-z] [A-Z]`  
 2 `echo hello | tr [:lower:] [:upper:]`  
 ## if 
-```if expression  
+```
+   if expression  
    then 
        command 
    elif   
