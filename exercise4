@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+username=$(awk -F = '{print $NF}' ./exercise4txt)
+username=$(echo $username  | awk  '{print $1}')
+USER1= echo $username | tr [:lower:] [:upper:]
+
