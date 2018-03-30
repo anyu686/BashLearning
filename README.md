@@ -81,4 +81,7 @@ Sat
 3 `awk -F : '$3>200' /etc/passwd` , print line if the 3rd filed > 200  
 4 `awk -F : '$NF ~ /bin/' /etc/passwd`,print line if the last filed contatined `bin`  
   
+## tr 
+1 `echo hello | tr [a-z] [A-Z]`  
+2 `echo hello | tr [:lower:] [:upper:]`  
  
