@@ -16,6 +16,7 @@
 
 2 `read A`, read input from user and assign the value to A 
 
+3 `a=$(command)` e.g `a=$(date)`  
 ## Debug 
 
 1 `Bash -x <script Name>` to see the each steps of script running  
