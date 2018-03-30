@@ -108,11 +108,23 @@ done
 ```   
 e.g 
 ```
-for i in {1.5}  
+for i in {1..5}  
 do   
 	ping -c 1 192.168.0.$1  >/dev/null && echo 192.168.0.$ is pingable   
 done    
 ```   
+## case 
+```
+case $var in  
+<string1>)  
+echo string1 ;;  
+<string2>|<string3>)  
+echo string2 or string 3 ;;  
+*)    
+echo other string 
+;;  
+esac 
+```
  
  
  
