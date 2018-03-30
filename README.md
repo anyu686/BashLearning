@@ -69,12 +69,12 @@ Sat
 1 `echo $((1+1))`  
 2 `bc` deal with non-integers caculation `echo "scale=9; 10/3" | bc`     
 ## Grep
-1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`     
-
+1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`   
+       
 ##cut   
 `cut -f 1 -d : <file>` , `-f 1` first filed, `-d :`, delimater is `:`   
-
-##awk  
+      
+##awk    
 `awk -F <delimater> : '/search pattern/ {Action}'` <Path to File> 
 1 `awk -F : '{print $4}' /etc/passwd`  
 2 `awk -F : '/user/ {print $4}' /etc/passwd`    
