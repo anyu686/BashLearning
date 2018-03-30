@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+awk -F = '{print $2}' exercise5txt  >> temp.txt > /dev/null
+if [ -f Name.txt ];
+then
+	awk -F , '{print $1}' temp.txt > Name.txt ;
+else 
+	awk -F , '{print $1}' temp.txt >> Name.txt ;
+fi
+rm temp.txt
+cat Name.txt
+

@@ -32,6 +32,7 @@
 4 `[ -f $a ]`, check if $a is a file  
 5 `[ -d $a ]`, check if $a is a directory
 ## Substitution
+To do subsitution for the lines in a file, use for loop e.g ```for i in $(cat <filename>) ; do <substitution>; done```   
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
 2   `echo ${DATA:=word}` //return word if DATA not exist and set DATA=word  
 3 
@@ -124,7 +125,19 @@ echo string2 or string 3 ;;
 echo other string 
 ;;  
 esac 
+```  
+## while
 ```
+while condition  
+do  
+	command  
+done  
+```  
+e.g
+```
+while [ $a> 4 ]; do  a=$(($a-1)) && echo $a; done
+```  
+
  
  
  
