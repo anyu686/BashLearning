@@ -28,6 +28,7 @@
 1 `-z $1` check if the first parameter is empty, return true if it is empyt,  e.g [if -z $1 -eq 1]  
 2 `[[-z $1]] && exit 1`  '&&' only execute the 2nd command if the frist command is true  
 3 `[[-z $1]] || exit 1` , `||` only execute the 2nd command if the frit command is false 
+
 ## Substitution
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
 2   `echo ${DATA:=word}` //return word if DATA not exist and set DATA=word  
@@ -68,9 +69,11 @@ Sat
 1 `echo $((1+1))`  
 2 `bc` deal with non-integers caculation `echo "scale=9; 10/3" | bc`     
 ## Grep
-1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`   
+1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`     
+
 ##cut
-`cut -f 1 -d : <file>` , `-f 1` first filed, `-d :`, delimater is `:`  
+`cut -f 1 -d : <file>` , `-f 1` first filed, `-d :`, delimater is `:`   
+
 ##awk
  `awk -F <delimater> : '/search pattern/ {Action}'` <Path to File> 
 1 `awk -F : '{print $4}' /etc/passwd`  
