@@ -71,11 +71,11 @@ Sat
 ## Grep
 1 capture mutile matching , string1 or string B `grep -e string1 -e string 2`     
 
-##cut
+##cut   
 `cut -f 1 -d : <file>` , `-f 1` first filed, `-d :`, delimater is `:`   
 
-##awk
- `awk -F <delimater> : '/search pattern/ {Action}'` <Path to File> 
+##awk  
+`awk -F <delimater> : '/search pattern/ {Action}'` <Path to File> 
 1 `awk -F : '{print $4}' /etc/passwd`  
 2 `awk -F : '/user/ {print $4}' /etc/passwd`    
 3 `awk -F : '$3>200' /etc/passwd` , print line if the 3rd filed > 200  
