@@ -106,15 +106,14 @@ do
 	command2
 done 
 ```   
-e.g ```
+e.g 
+```
 for i in {1.5}  
 do   
 	ping -c 1 192.168.0.$1  >/dev/null && echo 192.168.0.$ is pingable   
 done    
 ```   
  
-```
  
  
-```
  
