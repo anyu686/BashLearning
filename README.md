@@ -29,7 +29,8 @@
 1 `-z $1` check if the first parameter is empty, return true if it is empyt,  e.g [if -z $1 -eq 1]  
 2 `[[-z $1]] && exit 1`  '&&' only execute the 2nd command if the frist command is true  
 3 `[[-z $1]] || exit 1` , `||` only execute the 2nd command if the frit command is false 
-
+4 `[ -f $a ]`, check if $a is a file  
+5 `[ -d $a ]`, check if $a is a directory
 ## Substitution
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
 2   `echo ${DATA:=word}` //return word if DATA not exist and set DATA=word  
@@ -94,4 +95,26 @@ Sat
       command 
    fi   
 ``` 
-## while 
+## && and || 
+`&&` and  , `[ -z $1 ] && echo variable $1 not exist`   
+`||` or  , `[ -z $1 ] && echo variable $1 not exist || not exist``  
+## for 
+```
+for i in something   
+do   
+	command1
+	command2
+done 
+```   
+e.g ```
+for i in {1.5}  
+do   
+	ping -c 1 192.168.0.$1  >/dev/null && echo 192.168.0.$ is pingable   
+done    
+```   
+ 
+```
+ 
+ 
+```
+ 
