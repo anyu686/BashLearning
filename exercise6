@@ -1,0 +1,32 @@
+#! /usr/bin/env bash
+pingtest()
+{
+
+	ping -c 1 localhost &>/dev/null 
+	if [[ $? -eq 0 ]]
+	then 
+		echo "local host is pingable"
+	else
+	        echo "local host not pingable"	
+	fi
+}
+
+menu ()
+{
+select OPT in "Reset Passwd" "Ping host" " show disk usage" "logout"
+do 
+##	if [[ ! -z $OPT ]]
+##	then 
+		case $REPLY in 
+		1 ) ls ;;
+		2 ) pingtest;;
+		3 ) df -h;;
+		4 ) break ;;
+		* ) echo try again ;;
+		esac 
+##	else
+##		echo invalid
+##	fi
+done
+}
+menu 

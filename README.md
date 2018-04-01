@@ -92,7 +92,8 @@ Sat
    if expression  
    then 
        command 
-   elif   
+   elif 
+   then  
       command 
    fi   
 ``` 
@@ -159,16 +160,15 @@ echo hi
 ```
 #! /usr/bin/env bash
 echo select from below 
-select DIR in a b c
-do 	
-	if [-n $DIR]
-		DIR=$DIR
-		echo you selectd $DIR
-		break
-	else
-		echo invalid
-	fi
-done
-
+select DIR in /var /var/log /etc
+do  
+	case $REPLY in  
+	1 ) cd /var/;;  	
+	2 ) cd /var/log ;;  
+	3 ) cd /etc ;;  
+done  
+```  
+note: use `$REPLAY` to refer to the unser input value;  
  
- 
+## Trap
+`trap "echo quit" INT`  `INT is signal of Ctrl + C`   
