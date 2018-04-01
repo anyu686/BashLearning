@@ -137,8 +137,38 @@ e.g
 ```
 while [ $a> 4 ]; do  a=$(($a-1)) && echo $a; done
 ```  
+## Functions
+```
+function help   
+{  
+ echo hi
+}   
+```  
+or   
+``` 
+help ()  
+{
+echo hi  
+}  
+```  
+## Arrays
+1 `names=(linda lisa larua)`  `names[3]=<name>`, `echo ${names[2]}`  
+2 `echo ${names[@]}`  show all elements  
+3 `echo ${#names[@]}` count the number of element  
+## Menu Interface  
+```
+#! /usr/bin/env bash
+echo select from below 
+select DIR in a b c
+do 	
+	if [-n $DIR]
+		DIR=$DIR
+		echo you selectd $DIR
+		break
+	else
+		echo invalid
+	fi
+done
 
- 
- 
  
  
