@@ -19,7 +19,7 @@
 3 `a=$(command)` e.g `a=$(date)`  
 ## Debug 
 
-1 `Bash -x <script Name>` to see the each steps of script running  
+1 `Bash -x <script Name>` to see the each steps of script running, `+` indicate code which is excuted, without `+` is the output of shell    
 
 ## Read Input 
 1 `$1 $2` refer to the 1st ,2nd input parameter  
@@ -30,7 +30,9 @@
 2 `[[-z $1]] && exit 1`  '&&' only execute the 2nd command if the frist command is true  
 3 `[[-z $1]] || exit 1` , `||` only execute the 2nd command if the frit command is false 
 4 `[ -f $a ]`, check if $a is a file  
-5 `[ -d $a ]`, check if $a is a directory
+5 `[ -d $a ]`, check if $a is a directory  
+6 `if [ $a -gt $b ] `or `if (( $a>$b ))`, `-lt` = `<`   
+7 `[ -e $a ]`, check if file exist regardless if it is aregular file  
 ## Substitution
 To do subsitution for the lines in a file, use for loop e.g ```for i in $(cat <filename>) ; do <substitution>; done```   
 1  `echo ${DATA:-word}`  //return word if DATA not exist, but not set DATA  
@@ -151,7 +153,8 @@ help ()
 {
 echo hi  
 }  
-```  
+``` 
+To include the functions from another script, use `source /path/to/script`   
 ## Arrays
 1 `names=(linda lisa larua)`  `names[3]=<name>`, `echo ${names[2]}`  
 2 `echo ${names[@]}`  show all elements  

@@ -1,0 +1,16 @@
+#! /bin/bash
+checking()
+{
+while ps aux | grep mail | grep -v grep > /dev/null 
+do 
+	echo hi
+	sleep 1
+done
+}
+checking 
+echo sending mail
+mail -s test yu.an@ocado.com
+
+
+
+
